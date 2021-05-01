@@ -1,11 +1,15 @@
 <div class="container">
 	<div class="left">
 		<div class="section">
-			<div class="title">{{profile.contactTitle}}</div>
+			<div class="title">{{profile.contact.title}}</div>
 			<div class="info">
-				<div>sarazafe@gmail.com</div>
-				<div><a href="{{profile.linkedInUrl}}" target="_blank">www.linkedin.com/in/sara-zapico-
-					fernandez <span class="light"> (LinkedIn)</span></a></div>
+				<div><a href="mailto:{{profile.contact.email}}" target="_blank">{{profile.contact.email}}</a></div>
+				<div *ngFor="let site of profile.contact.sites">
+					<a href="{{site.url}}" target="_blank" title="Go to {{site.name}}">
+						<span>{{site.name}}</span>
+						<mat-icon aria-label="Open site" [inline]="true">open_in_new</mat-icon>
+					</a>
+				</div>
 			</div>
 		</div>
 		<div class="section">
@@ -30,7 +34,7 @@
 			<div class="title">{{profile.certificationsTitle}}</div>
 			<div class="info">
 				<div *ngFor="let certification of profile.certifications">
-					<a *ngIf="certification.resources; else elseBlock" href="{{certification.resources}}" target="_blank">
+					<a *ngIf="certification.resources; else elseBlock" href="{{certification.resources}}" target="_blank" title="Open certification of {{certification.name}}">
 							<span>{{certification.name}}</span>
 							<mat-icon aria-label="Open certification" [inline]="true">open_in_new</mat-icon>
 					</a>
@@ -42,7 +46,7 @@
 			<div class="title">{{profile.certificationsInProgressTitle}}</div>
 			<div class="info">
 				<div *ngFor="let certification of profile.certificationsInProgress">
-					<a *ngIf="certification.resources; else elseBlock" href="{{certification.resources}}" target="_blank">
+					<a *ngIf="certification.resources; else elseBlock" href="{{certification.resources}}" target="_blank" title="Open certification of {{certification.name}}">
 						<span>{{certification.name}}</span>
 						<mat-icon aria-label="Open certification" [inline]="true">open_in_new</mat-icon>
 					</a>

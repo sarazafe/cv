@@ -1,6 +1,18 @@
 export const EnglishProfile = {
-    contactTitle: 'Contact',
-    linkedInUrl: 'https://www.linkedin.com/in/sara-zapico-fernandez/?locale=en_US',
+    contact: {
+        title: 'Contact',
+        email: 'sarazafe@gmail.com',
+        sites: [
+            {
+                name: 'LinkedIn',
+                url: 'https://www.linkedin.com/in/sara-zapico-fernandez/?locale=en_US',
+            },
+            {
+                name: 'Github',
+                url: 'https://github.com/sarazafe'
+            }
+        ],
+    },
     aptitudesTitle: 'Main aptitudes',
     aptitudes: [
         'Java',
