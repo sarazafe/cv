@@ -1,0 +1,70 @@
+<div class="container">
+	<div class="left">
+		<div class="section">
+			<div class="title">{{profile.contactTitle}}</div>
+			<div class="info">
+				<div>sarazafe@gmail.com</div>
+				<div><a href="{{profile.linkedInUrl}}" target="_blank">www.linkedin.com/in/sara-zapico-
+					fernandez <span class="light"> (LinkedIn)</span></a></div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="title">{{profile.aptitudesTitle}}</div>
+			<div class="info">
+				<div *ngFor="let aptitud of profile.aptitudes">{{aptitud}}</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="title">{{profile.languagesTitle}}</div>
+			<div class="info">
+				<div *ngFor="let language of profile.languages">{{language.language}} <span class="light">{{language.level}}</span></div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="title">{{profile.honorsTitle}}</div>
+			<div class="info">
+				<div *ngFor="let honor of profile.honors">{{honor}}</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="title">{{profile.certificationsTitle}}</div>
+			<div class="info">
+				<div *ngFor="let certification of profile.certifications">
+					<a *ngIf="certification.certification; else elseBlock" href="{{certification.certification}}" target="_blank">
+							<span>{{certification.name}}</span>
+							<mat-icon aria-label="Open certification" [inline]="true">open_in_new</mat-icon>
+					</a>
+					<ng-template #elseBlock><span>{{certification.name}}</span></ng-template>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="right">
+		<div class="user-profile">
+			<div class="name">Sara Zapico Fernández</div>
+			<div class="job">{{profile.job}}</div>
+			<div class="address">Turón, Asturias, España</div>
+		</div>
+		<div class="extract">
+			<div class="title">{{profile.extractTitle}}</div>
+			<div class="body">{{profile.extract}}</div>
+		</div>
+		<div class="separator"></div>
+		<div class="experience">
+			<div class="title">{{profile.experienceTitle}}</div>
+			<div class="job" *ngFor="let experience of profile.experience">
+				<div class="company">{{experience.company}}</div>
+				<div class="charge">{{experience.role}}</div>
+				<div class="duration">{{experience.duration}}</div>
+			</div>
+		</div>
+		<div class="separator"></div>
+		<div class="education">
+			<div class="title">{{profile.educationTitle}}</div>
+			<div class="grade" *ngFor="let education of profile.education">
+				<div class="place">{{education.place}}</div>
+				<div class="degree">{{education.degree}}</div>
+			</div>
+		</div>
+	</div>
+</div>

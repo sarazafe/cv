@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {EnglishProfile} from '../profile/en';
+import {SpanishProfile} from '../profile/es';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cv';
+  englishProfile = EnglishProfile;
+  spanishProfile = SpanishProfile;
 }

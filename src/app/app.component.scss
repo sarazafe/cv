@@ -1,0 +1,19 @@
+nav {
+  position: absolute;
+  left: 1vw;
+  top: 2vh;
+
+  a {
+    color: #B1BDC5;
+    text-decoration: none;
+    margin-right: 1vw;
+
+    &.active {
+      color: #FFFFFF;
+    }
+
+    &:hover {
+      color: #FFFFFF;
+    }
+  }
+}
