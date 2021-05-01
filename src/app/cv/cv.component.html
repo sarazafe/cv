@@ -30,9 +30,21 @@
 			<div class="title">{{profile.certificationsTitle}}</div>
 			<div class="info">
 				<div *ngFor="let certification of profile.certifications">
-					<a *ngIf="certification.certification; else elseBlock" href="{{certification.certification}}" target="_blank">
+					<a *ngIf="certification.resources; else elseBlock" href="{{certification.resources}}" target="_blank">
 							<span>{{certification.name}}</span>
 							<mat-icon aria-label="Open certification" [inline]="true">open_in_new</mat-icon>
+					</a>
+					<ng-template #elseBlock><span>{{certification.name}}</span></ng-template>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="title">{{profile.certificationsInProgressTitle}}</div>
+			<div class="info">
+				<div *ngFor="let certification of profile.certificationsInProgress">
+					<a *ngIf="certification.resources; else elseBlock" href="{{certification.resources}}" target="_blank">
+						<span>{{certification.name}}</span>
+						<mat-icon aria-label="Open certification" [inline]="true">open_in_new</mat-icon>
 					</a>
 					<ng-template #elseBlock><span>{{certification.name}}</span></ng-template>
 				</div>

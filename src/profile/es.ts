@@ -31,13 +31,20 @@ export const SpanishProfile = {
     certifications: [
         {
             name: `Udacity's React Nanodegree`,
-            certification: '../assets/react_nanodegree.pdf'
+            resources: '../assets/react_nanodegree.pdf'
         },
         {
             name: 'Shaping up with Angular.js',
         },
         {
             name: 'Web Assessment for SAP Message Processor and Operations for Support Consultant',
+        },
+    ],
+    certificationsInProgressTitle: 'Certificaciones en progreso',
+    certificationsInProgress: [
+        {
+            name: 'Epic React',
+            resources: 'https://epicreact.dev/'
         },
     ],
     honorsTitle: 'Logros',
