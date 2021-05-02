@@ -10,7 +10,12 @@ export const SpanishProfile = {
             {
                 name: 'Github',
                 url: 'https://github.com/sarazafe'
-            }
+            },
+            {
+                name: 'CV online',
+                url: 'https://sarazafe.github.io/#/es',
+                printVersion: true,
+            },
         ],
     },
     attitudesTitle: 'Principales aptitudes',

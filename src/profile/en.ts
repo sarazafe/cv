@@ -10,7 +10,12 @@ export const EnglishProfile = {
             {
                 name: 'Github',
                 url: 'https://github.com/sarazafe'
-            }
+            },
+            {
+                name: 'Online CV',
+                url: 'https://sarazafe.github.io',
+                printVersion: true,
+            },
         ],
     },
     aptitudesTitle: 'Main aptitudes',
