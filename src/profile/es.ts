@@ -85,7 +85,7 @@ export const SpanishProfile = {
         title: 'Extracto',
         extract: 'Desarrolladora full stack con perfil CSS, HTML, Javascript/Typescript, ' +
                 'Angular y ReactJS en la parte Front y Java en la parte Back. ' +
-                'Me gustan los retos y aprender cosas nuevas de continuo. En cuanto tengo un momento libre me pongo a dibujar y pintar, ' +
+                'Me gustan los retos y aprender cosas nuevas. En cuanto tengo un momento libre me pongo a dibujar y pintar, ' +
                 'puede ser por eso que muchas veces siento que la balanza se me inclina a la parte Front.',
     },
     experience: {
@@ -94,12 +94,12 @@ export const SpanishProfile = {
             {
                 company: 'Empathy.co',
                 role: 'Desarrolladora front-end',
-                duration: 'June 2020 - Present'
+                duration: 'Junio de 2020 - Presente'
             },
             {
                 company: 'Zapiens Technologies SL',
                 role: 'Analista programadora',
-                duration: 'Mayo de 2017 - June 2020'
+                duration: 'Mayo de 2017 - Junio de 2020'
             },
             {
                 company: 'Ricoh España',
@@ -119,7 +119,7 @@ export const SpanishProfile = {
             {
                 company: 'Universidad de Oviedo',
                 role: 'Webmaster',
-                duration: 'Setiembre 2009 - Julio 2010'
+                duration: 'Setiembre de 2009 - Julio de 2010'
             }
         ],
     },
