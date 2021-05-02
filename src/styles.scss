@@ -6,9 +6,33 @@ body {
   height: 100vh;
 }
 
-
-
 @page {
   size: A4;
+}
+
+.print-version {
+  display: none;
+}
+
+@media print
+{
+  .no-print, .no-print *
+  {
+    display: none;
+  }
+
+  .print-version {
+    display: inline;
+  }
+
+  .container {
+    .left, .right {
+      padding: 4vh 5vw !important;
+    }
+
+    .section {
+      margin-bottom: 2vh !important;
+    }
+  }
 }
 

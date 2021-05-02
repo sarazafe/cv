@@ -5,7 +5,7 @@
 			<div class="info">
 				<div><a href="mailto:{{profile.contact.email}}" target="_blank">{{profile.contact.email}}</a></div>
 				<div *ngFor="let site of profile.contact.sites">
-					<a href="{{site.url}}" target="_blank" title="Go to {{site.name}}">
+					<a href="{{site.url}}" target="_blank" title="Go to {{site.name}}" [ngClass]="{'print-version': site.printVersion}">
 						<span>{{site.name}}</span>
 						<mat-icon aria-label="Open site" [inline]="true">open_in_new</mat-icon>
 					</a>
