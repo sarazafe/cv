@@ -2,7 +2,8 @@ export const SpanishProfile = {
     contact: {
         title: 'Contactar',
         name: 'Sara Zapico Fernández',
-        address: 'Turón, Asturias, Spain',
+        address: 'Turón, Asturias, España',
+        mapsLink: 'https://goo.gl/maps/H4MKv1k1hcH6WJtT8',
         email: 'sarazafe@gmail.com',
         sites: [
             {
@@ -67,6 +68,7 @@ export const SpanishProfile = {
     },
     certificationsInProgress: {
         title: 'Certificaciones en progreso',
+        printVersion: false,
         certificationsInProgress: [
             {
                 name: 'Epic React',

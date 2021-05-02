@@ -5,7 +5,8 @@
 			<div class="info">
 				<div><a href="mailto:{{profile.contact.email}}" target="_blank">{{profile.contact.email}}</a></div>
 				<div *ngFor="let site of profile.contact.sites">
-					<a href="{{site.url}}" target="_blank" title="Go to {{site.name}}" [ngClass]="{'print-version': site.printVersion}">
+					<a href="{{site.url}}" target="_blank" title="{{site.name}}"
+					   [ngClass]="{'print-version': site.printVersion}">
 						<span>{{site.name}}</span>
 						<mat-icon aria-label="Open site" [inline]="true">open_in_new</mat-icon>
 					</a>
@@ -21,7 +22,8 @@
 		<div class="section">
 			<div class="title">{{profile.languages.title}}</div>
 			<div class="info">
-				<div *ngFor="let language of profile.languages.languages">{{language.language}} <span class="light">{{language.level}}</span></div>
+				<div *ngFor="let language of profile.languages.languages">{{language.language}} <span
+						class="light">{{language.level}}</span></div>
 			</div>
 		</div>
 		<div class="section">
@@ -34,19 +36,21 @@
 			<div class="title">{{profile.certifications.title}}</div>
 			<div class="info">
 				<div *ngFor="let certification of profile.certifications.certifications">
-					<a *ngIf="certification.resources; else elseBlock" href="{{certification.resources}}" target="_blank" title="Open certification of {{certification.name}}">
-							<span>{{certification.name}}</span>
-							<mat-icon aria-label="Open certification" [inline]="true">open_in_new</mat-icon>
+					<a *ngIf="certification.resources; else elseBlock" href="{{certification.resources}}"
+					   target="_blank" title="{{certification.name}}">
+						<span>{{certification.name}}</span>
+						<mat-icon aria-label="Open certification" [inline]="true">open_in_new</mat-icon>
 					</a>
 					<ng-template #elseBlock><span>{{certification.name}}</span></ng-template>
 				</div>
 			</div>
 		</div>
-		<div class="section">
+		<div class="section" [ngClass]="{'no-print': !profile.certificationsInProgress.printVersion}">
 			<div class="title">{{profile.certificationsInProgress.title}}</div>
 			<div class="info">
 				<div *ngFor="let certification of profile.certificationsInProgress.certificationsInProgress">
-					<a *ngIf="certification.resources; else elseBlock" href="{{certification.resources}}" target="_blank" title="Open certification of {{certification.name}}">
+					<a *ngIf="certification.resources; else elseBlock" href="{{certification.resources}}"
+					   target="_blank" title="{{certification.name}}">
 						<span>{{certification.name}}</span>
 						<mat-icon aria-label="Open certification" [inline]="true">open_in_new</mat-icon>
 					</a>
@@ -59,27 +63,32 @@
 		<div class="user-profile">
 			<div class="name">{{profile.contact.name}}</div>
 			<div class="job">{{profile.job}}</div>
-			<div class="address">{{profile.contact.address}}</div>
-		</div>
-		<div class="extract">
-			<div class="title">{{profile.extract.title}}</div>
-			<div class="body">{{profile.extract.extract}}</div>
-		</div>
-		<div class="separator"></div>
-		<div class="experience">
-			<div class="title">{{profile.experience.title}}</div>
-			<div class="job" *ngFor="let experience of profile.experience.experience">
-				<div class="company">{{experience.company}}</div>
-				<div class="charge">{{experience.role}}</div>
-				<div class="duration">{{experience.duration}}</div>
+			<div class="address">
+				<a href="{{profile.contact.mapsLink}}" target="_blank" title="{{profile.contact.address}}">
+					<span>{{profile.contact.address}}</span>
+					<mat-icon aria-label="Open site" [inline]="true">open_in_new</mat-icon>
+				</a>
 			</div>
-		</div>
-		<div class="separator"></div>
-		<div class="education">
-			<div class="title">{{profile.education.title}}</div>
-			<div class="grade" *ngFor="let education of profile.education.education">
-				<div class="place">{{education.place}}</div>
-				<div class="degree">{{education.degree}}</div>
+			<div class="extract">
+				<div class="title">{{profile.extract.title}}</div>
+				<div class="body">{{profile.extract.extract}}</div>
+			</div>
+			<div class="separator"></div>
+			<div class="experience">
+				<div class="title">{{profile.experience.title}}</div>
+				<div class="job" *ngFor="let experience of profile.experience.experience">
+					<div class="company">{{experience.company}}</div>
+					<div class="charge">{{experience.role}}</div>
+					<div class="duration">{{experience.duration}}</div>
+				</div>
+			</div>
+			<div class="separator"></div>
+			<div class="education">
+				<div class="title">{{profile.education.title}}</div>
+				<div class="grade" *ngFor="let education of profile.education.education">
+					<div class="place">{{education.place}}</div>
+					<div class="degree">{{education.degree}}</div>
+				</div>
 			</div>
 		</div>
 	</div>
