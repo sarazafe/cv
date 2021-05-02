@@ -23,12 +23,12 @@ export const SpanishProfile = {
     aptitudes: {
         title: 'Principales aptitudes',
         aptitudes: [
-            'Java',
             'Javascript/Typescript',
             'Angular',
-            'React',
+            'ReactJS',
             'HTML',
-            'CSS'
+            'CSS',
+            'Java',
         ],
     },
     languages: {
@@ -81,8 +81,8 @@ export const SpanishProfile = {
     job: 'Desarrolladora de software',
     extract: {
         title: 'Extracto',
-        extract: 'Desarrolladora full stack con perfil Java en la parte Back y CSS, HTML, Javascript/Typescript y ' +
-                'Angular en la parte Front. ' +
+        extract: 'Desarrolladora full stack con perfil CSS, HTML, Javascript/Typescript, ' +
+                'Angular y ReactJS en la parte Front y Java en la parte Back. ' +
                 'Me gustan los retos y aprender cosas nuevas de continuo. En cuanto tengo un momento libre me pongo a dibujar y pintar, ' +
                 'puede ser por eso que muchas veces siento que la balanza se me inclina a la parte Front.',
     },

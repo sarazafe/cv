@@ -23,12 +23,12 @@ export const EnglishProfile = {
     aptitudes: {
         title: 'Main aptitudes',
         aptitudes: [
-            'Java',
             'Javascript/Typescript',
             'Angular',
-            'React',
+            'ReactJS',
             'HTML',
-            'CSS'
+            'CSS',
+            'Java',
         ],
     },
     languages: {
@@ -46,7 +46,7 @@ export const EnglishProfile = {
                 level: '(Native or Bilingual)'
             },
             {
-                language: 'Asturiano',
+                language: 'Asturian',
                 level: '(Native or Bilingual)'
             }],
     },
@@ -81,8 +81,8 @@ export const EnglishProfile = {
     job: 'Software developer',
     extract: {
         title: 'Extract',
-        extract: 'Full-stack developer with Java profile in the Back part and CSS, HTML, ' +
-                'Javascript/Typescript and Angular in the Front part. I really like the challenges and learning new ' +
+        extract: 'Full-stack developer with CSS, HTML, Javascript/Typescript, Angular and  y ReactJS profile in the Front part ' +
+                'and Java in the Back part. I really like the challenges and learning new ' +
                 'things all the time. As soon as I have a free moment I start to draw and paint and this is, maybe, the ' +
                 'reason because on many occasions I feel that the balance leans towards the Front.',
     },
