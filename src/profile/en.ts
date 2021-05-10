@@ -62,6 +62,10 @@ export const EnglishProfile = {
                 name: 'Shaping up with Angular.js',
             },
             {
+                name: 'Functional programming in Javascript: A practical guide',
+                resources: '../assets/javascript_functional_programming.pdf'
+            },
+            {
                 name: 'Web Assessment for SAP Message Processor and Operations for Support Consultant',
             },
         ],
